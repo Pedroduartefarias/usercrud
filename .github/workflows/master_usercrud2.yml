@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - usercrud2
+name: Build and deploy JAR app to Azure Web App - UserCrud2
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_166FDCCCB481497DB7B45A3537B12BA9 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0C411987B05A4BB882870AA6226EFAB5 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5FD3C921F3F04C08B3EFD9D58A124EA4 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DCE2D94735CE40E389D9610A6D6C6F85 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9513898E20104EFCAB5F73333016650D }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F330B9DE71F94C9CA7239A665D8408C0 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'usercrud2'
+          app-name: 'UserCrud2'
           slot-name: 'Production'
           package: '*.jar'
           
